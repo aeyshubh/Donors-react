@@ -1,29 +1,10 @@
 {
     "abi" : [
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "_to",
-                    "type": "address"
-                }
-            ],
-            "name": "donateEthers",
-            "outputs": [],
-            "stateMutability": "payable",
-            "type": "function"
-        },
-        {
             "anonymous": false,
             "inputs": [
                 {
                     "indexed": false,
-                    "internalType": "address",
-                    "name": "from",
-                    "type": "address"
-                },
-                {
-                    "indexed": true,
                     "internalType": "address",
                     "name": "to",
                     "type": "address"
@@ -31,7 +12,7 @@
                 {
                     "indexed": false,
                     "internalType": "uint256",
-                    "name": "amount",
+                    "name": "amt",
                     "type": "uint256"
                 },
                 {
@@ -41,39 +22,68 @@
                     "type": "uint256"
                 }
             ],
-            "name": "showDonations",
+            "name": "dataa",
             "type": "event"
         },
         {
-            "inputs": [],
-            "name": "getDonations",
+            "inputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "_to",
+                    "type": "address"
+                }
+            ],
+            "name": "sendEth",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "a",
             "outputs": [
                 {
-                    "components": [
-                        {
-                            "internalType": "address",
-                            "name": "from",
-                            "type": "address"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "to",
-                            "type": "address"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "amount",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "timestamp",
-                            "type": "uint256"
-                        }
-                    ],
-                    "internalType": "struct donate.vc[]",
+                    "internalType": "address",
                     "name": "",
-                    "type": "tuple[]"
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "amount",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getBalance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
                 }
             ],
             "stateMutability": "view",

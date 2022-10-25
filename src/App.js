@@ -4,7 +4,7 @@ import abi from './donabi.json';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '@coreui/coreui/dist/css/coreui.min.css'
 import { CCard, CCardImage, CCardBody, CCardTitle, CCardText, CButton,CCol,CRow} from '@coreui/react';
-const contractAddress = "0x07d2a73b495FE8B41D5a1992cae58BA95832f305";// -- new donation contract
+const contractAddress = "0x50C5EE8eC3207316D1823D9b0Be4F470479773B2";// -- new donation contract
 const contractAbi = abi.abi;
 
 export default function App() {
@@ -90,7 +90,7 @@ export default function App() {
 
         console.log("Donating");
         const orgAddress = _to;
-        const donatingTxn = await donationContract.donateEthers(
+        const donatingTxn = await donationContract.sendEth(
           _to ? orgAddress : "No Address",
           { value: ethers.utils.parseEther(amt) }
         );
